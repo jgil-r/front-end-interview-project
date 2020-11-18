@@ -1,6 +1,13 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 
 import Header from './header';
+
+const Main = styled.main`
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+`;
 
 const Layout = ({ children, title }) => {
   return (
@@ -12,7 +19,7 @@ const Layout = ({ children, title }) => {
       </Head>
       <div>
         <Header />
-        <main>{children}</main>
+        <Main>{children}</Main>
         <footer>Footer</footer>
       </div>
     </div>

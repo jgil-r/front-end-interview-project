@@ -1,13 +1,24 @@
-import { Layout } from '../components';
+import { Layout, Hero } from '../components';
 
-const Index = () => {
+export async function getStaticProps() {
+  const res = await fetch(
+    'https://api.foxtrotchicago.com/v5/inventory/aisles/224/items?store_id=6'
+  );
+
+  const data = await res.json();
+
+  return {
+    props: {
+      products: data,
+    },
+  };
+}
+
+const Index = ({ products }) => {
+  console.log(products);
   return (
     <Layout title="Foxtrot">
-      <h1>Welcome to the Foxtrot front-end coding project</h1>
-      <p>
-        Please take a look at the README before staring and feel free to reach
-        out with any questions or concerns!
-      </p>
+      <Hero />
     </Layout>
   );
 };
