@@ -4,3 +4,4 @@
 export { default as GlobalStyles } from './GlobalStyles';
 export { default as Layout } from './layout';
 export { default as Hero } from './hero';
+export { default as Group } from './group';

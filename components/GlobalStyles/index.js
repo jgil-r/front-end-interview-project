@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
     :root {
         --color-black: #000000;
         --color-white: #ffffff;
+        --color-price: #6d7173;
     }
 
     body {
@@ -18,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         margin: 0;
         padding: 0;
+    }
+
+    svg {
+        display: flex;
     }
 `;
 

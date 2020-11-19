@@ -1,4 +1,12 @@
-import { Layout, Hero } from '../components';
+import styled from 'styled-components';
+import { Layout, Hero, Group } from '../components';
+
+const GroupsContainer = styled.div`
+  padding: 3rem 0;
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+`;
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -9,16 +17,20 @@ export async function getStaticProps() {
 
   return {
     props: {
-      products: data,
+      aisles: data,
     },
   };
 }
 
-const Index = ({ products }) => {
-  console.log(products);
+const Index = ({ aisles }) => {
   return (
     <Layout title="Foxtrot">
       <Hero />
+      <GroupsContainer>
+        {aisles.aisle.groups.map(({ id, name, products }) => (
+          <Group key={id} groupName={name} products={products} />
+        ))}
+      </GroupsContainer>
     </Layout>
   );
 };

@@ -19,8 +19,8 @@ const ImageContainer = styled.div`
   }
 `;
 
-const InfoContainer = styled.div`
-  padding: 0 1rem;
+const HeroInfoContainer = styled.div`
+  padding: 1rem;
 `;
 
 const Hero = () => {
@@ -29,13 +29,13 @@ const Hero = () => {
       <ImageContainer>
         <img src="/aisle.jpg" alt="Table with beer" />
       </ImageContainer>
-      <InfoContainer>
+      <HeroInfoContainer>
         <h1>Discover Aisle</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-      </InfoContainer>
+      </HeroInfoContainer>
     </HeroContainer>
   );
 };
