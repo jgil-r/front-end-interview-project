@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 
 import Header from './header';
+import Footer from './footer';
 
 const Main = styled.main`
   width: 800px;
@@ -20,7 +21,7 @@ const Layout = ({ children, title }) => {
       <div>
         <Header />
         <Main>{children}</Main>
-        <footer>Footer</footer>
+        <Footer />
       </div>
     </div>
   );
